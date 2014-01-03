@@ -9,10 +9,15 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
 @implementation ViewController
+- (IBAction)findvalue:(id)sender {
+    UISlider*valslider=(UISlider *) sender;
+    self.label.text=[NSString stringWithFormat:@"Value: %f",valslider.value];
+}
 
 - (void)viewDidLoad
 {
